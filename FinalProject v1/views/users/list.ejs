@@ -1,0 +1,27 @@
+<%- include('../layouts/header') %>
+<h1>List of Users</h1>
+<a href="/users/add">Add New User</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(user => { %>
+        <tr>
+            <td><%= user.user_id %></td>
+            <td><%= user.username %></td>
+            <td><%= user.role %></td>
+            <td>
+                <a href="/users/edit/<%= user.user_id %>">Edit</a> |
+                <a href="/users/delete/<%= user.user_id %>">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+<%- include('../layouts/footer') %>

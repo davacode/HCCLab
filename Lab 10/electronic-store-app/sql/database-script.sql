@@ -1,0 +1,11 @@
+--FILE TO CREATE THE DATABASE - DO NOT ALTER THE DATABASE STRUCTURE
+-- Create the "store" database
+CREATE DATABASE IF NOT EXISTS store;
+
+-- Create the "devices" table
+CREATE TABLE IF NOT EXISTS devices (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  device_name VARCHAR(255) NOT NULL,
+  brand VARCHAR(255) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL
+);

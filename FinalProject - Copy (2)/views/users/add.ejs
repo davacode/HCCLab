@@ -1,0 +1,17 @@
+<%- include('../layouts/header') %>
+<div>
+<h1>Add New User</h1>
+<form method="POST" action="/users/add">
+    <label>Username:</label>
+    <input type="text" name="username" required />
+    <label>Password:</label>
+    <input type="password" name="password" required />
+    <label>Role:</label>
+    <select name="role" required>
+        <option value="admin">Admin</option>
+        <option value="staff">Staff</option>
+    </select>
+    <button type="submit">Add User</button>
+</form>
+</div>
+<%- include('../layouts/footer') %>

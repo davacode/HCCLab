@@ -1,0 +1,29 @@
+<%- include('../layouts/header') %>
+<h1>List of Enrollments</h1>
+<a href="/enrollments/add">Add New Enrollment</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Faculty</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% enrollments.forEach(enrollment => { %>
+        <tr>
+            <td><%= enrollment.enrollment_id %></td>
+            <td><%= enrollment.student_name %></td>
+            <td><%= enrollment.faculty_name %></td>
+            <td><%= enrollment.course_name %></td>
+            <td>
+                <a href="/enrollments/edit/<%= enrollment.enrollment_id %>">Edit</a> |
+                <a href="/enrollments/delete/<%= enrollment.enrollment_id %>">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+<%- include('../layouts/footer') %>

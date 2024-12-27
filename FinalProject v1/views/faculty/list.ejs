@@ -1,0 +1,29 @@
+<%- include('../layouts/header') %>
+<h1>List of Faculty Members</h1>
+<a href="/faculty/add">Add New Faculty</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% faculty.forEach(facultyMember => { %>
+        <tr>
+            <td><%= facultyMember.faculty_id %></td>
+            <td><%= facultyMember.first_name %></td>
+            <td><%= facultyMember.last_name %></td>
+            <td><%= facultyMember.email %></td>
+            <td>
+                <a href="/faculty/edit/<%= facultyMember.faculty_id %>">Edit</a> |
+                <a href="/faculty/delete/<%= facultyMember.faculty_id %>">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+<%- include('../layouts/footer') %>

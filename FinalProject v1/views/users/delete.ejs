@@ -1,0 +1,8 @@
+<%- include('../layouts/header') %>
+<h1>Delete User</h1>
+<p>Are you sure you want to delete the user "<%= user.username %>"?</p>
+<form method="POST" action="/users/delete/<%= user.user_id %>">
+    <button type="submit">Yes, Delete</button>
+    <a href="/users/list">Cancel</a>
+</form>
+<%- include('../layouts/footer') %>

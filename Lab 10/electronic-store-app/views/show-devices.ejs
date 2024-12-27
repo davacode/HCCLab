@@ -1,0 +1,43 @@
+<!-- show-device.ejs view
+DO NOT ALTER THIS CODE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Store - All Devices</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">All Devices</h1>
+        <a class="btn btn-primary mt-3" href="/devices/new">Add New Device</a>
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Device Name</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% devices.forEach(function(device) { %>
+                    <tr>
+                        <td><%= device.id %></td>
+                        <td><%= device.device_name %></td>
+                        <td><%= device.brand %></td>
+                        <td>$<%= device.price %></td>
+                        <td>
+                            <a class="btn btn-info" href="/devices/edit/<%= device.id %>">Edit</a>
+                            <a class="btn btn-danger" href="/devices/delete/<%= device.id %>">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

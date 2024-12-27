@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>User Register</title>
+</head>
+<body>
+<h1>Register</h1>
+<form method="POST" action="/users/register">
+    <label>Username:</label>
+    <input type="text" name="username" required />
+    <label>Password:</label>
+    <input type="password" name="password" required />
+    <label>Role (optional):</label>
+    <select name="role">
+        <option value="staff">Staff</option>
+    </select>
+    <button type="submit">Register</button>
+</form>
+<p>Already have an account? <a href="./login">Login here</a></p>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<%- include('../layouts/header') %>
+<h1>Delete Enrollment</h1>
+<p>Are you sure you want to delete this enrollment?</p>
+<form method="POST" action="/enrollments/delete/<%= enrollment.enrollment_id %>">
+    <button type="submit">Yes, Delete</button>
+    <a href="/enrollments/list">Cancel</a>
+</form>
+<%- include('../layouts/footer') %>

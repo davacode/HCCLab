@@ -1,0 +1,27 @@
+<%- include('../layouts/header') %>
+<h1>List of Courses</h1>
+<a href="/courses/add">Add New Course</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% courses.forEach(course => { %>
+        <tr>
+            <td><%= course.course_id %></td>
+            <td><%= course.course_name %></td>
+            <td><%= course.credits %></td>
+            <td>
+                <a href="/courses/edit/<%= course.course_id %>">Edit</a> |
+                <a href="/courses/delete/<%= course.course_id %>">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+<%- include('../layouts/footer') %>

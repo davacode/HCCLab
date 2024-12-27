@@ -1,0 +1,12 @@
+<%- include('../layouts/header') %>
+<h1>Edit Faculty Member</h1>
+<form method="POST" action="/faculty/edit/<%= faculty.faculty_id %>">
+    <label>First Name:</label>
+    <input type="text" name="first_name" value="<%= faculty.first_name %>" required />
+    <label>Last Name:</label>
+    <input type="text" name="last_name" value="<%= faculty.last_name %>" required />
+    <label>Email:</label>
+    <input type="email" name="email" value="<%= faculty.email %>" required />
+    <button type="submit">Update Faculty</button>
+</form>
+<%- include('../layouts/footer') %>

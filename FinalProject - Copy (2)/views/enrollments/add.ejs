@@ -1,0 +1,14 @@
+<%- include('../layouts/header') %>
+<div>
+<h1>Add New Enrollment</h1>
+<form method="POST" action="/enrollments/add">
+    <label>Student ID:</label>
+    <input type="text" name="student_id" required />
+    <label>Faculty ID:</label>
+    <input type="text" name="faculty_id" required />
+    <label>Course ID:</label>
+    <input type="text" name="course_id" required />
+    <button type="submit">Add Enrollment</button>
+</form>
+</div>
+<%- include('../layouts/footer') %>

@@ -1,0 +1,15 @@
+<%- include('../layouts/header') %>
+<div>
+<h1>Edit User</h1>
+<form method="POST" action="/users/edit/<%= user.user_id %>">
+    <label>Username:</label>
+    <input type="text" name="username" value="<%= user.username %>" required />
+    <label>Role:</label>
+    <select name="role" required>
+        <option value="admin" <%= user.role === 'admin' ? 'selected' : '' %>>Admin</option>
+        <option value="staff" <%= user.role === 'staff' ? 'selected' : '' %>>Staff</option>
+    </select>
+    <button type="submit">Update User</button>
+</form>
+</div>
+<%- include('../layouts/footer') %>

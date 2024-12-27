@@ -1,0 +1,10 @@
+<%- include('../layouts/header') %>
+<div>
+<h1>Delete Course</h1>
+<p>Are you sure you want to delete the course "<%= course.course_name %>"?</p>
+<form method="POST" action="/courses/delete/<%= course.course_id %>">
+    <button type="submit">Yes, Delete</button>
+    <a href="/courses/list">Cancel</a>
+</form>
+</div>
+<%- include('../layouts/footer') %>

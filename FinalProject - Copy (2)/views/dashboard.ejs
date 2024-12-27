@@ -1,0 +1,113 @@
+<%- include('./layouts/header') %>
+<div>
+<h1>Dashboard</h1>
+<div class="dashboard">
+    <div class="dropdown">
+        <button class="dropbtn">Courses</button>
+        <div class="dropdown-content">
+            <a href="/courses/add">Add Course</a>
+            <a href="/courses/list">List Courses</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Enrollments</button>
+        <div class="dropdown-content">
+            <a href="/enrollments/add">Add Enrollment</a>
+            <a href="/enrollments/list">List Enrollments</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Faculty</button>
+        <div class="dropdown-content">
+            <a href="/faculty/add">Add Faculty</a>
+            <a href="/faculty/list">List Faculty</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Students</button>
+        <div class="dropdown-content">
+            <a href="/students/add">Add Student</a>
+            <a href="/students/list">List Students</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Users</button>
+        <div class="dropdown-content">
+            <a href="/users/add">Add User</a>
+            <a href="/users/list">List Users</a>
+        </div>
+    </div>
+
+    <div class="dashboard">
+
+</div>
+</div>
+<style>
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+}
+
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background-color: #bababa;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #949494;
+    }
+    .user-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+<%- include('./layouts/footer') %>
